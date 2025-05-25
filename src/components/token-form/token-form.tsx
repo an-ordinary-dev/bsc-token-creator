@@ -241,7 +241,6 @@ function WalletApprovalDialog({
 
 function TokenSummary({
   name,
-  symbol,
   supply,
   contractAddress,
   creationFee,
@@ -250,7 +249,6 @@ function TokenSummary({
   maxTxAmount,
 }: {
   name: string
-  symbol: string
   supply: string
   contractAddress: string
   creationFee: string
@@ -282,10 +280,6 @@ function TokenSummary({
           <div>
             <div className="font-semibold text-sm text-muted-foreground">Name</div>
             <div className="text-lg font-medium">{name}</div>
-          </div>
-          <div>
-            <div className="font-semibold text-sm text-muted-foreground">Symbol</div>
-            <div className="text-lg font-medium">{symbol}</div>
           </div>
           <div>
             <div className="font-semibold text-sm text-muted-foreground">Total Supply</div>
@@ -353,7 +347,6 @@ function TokenForm() {
   })
   const [enableTax, setEnableTax] = useState(false)
   const [walletDialogStatus, setWalletDialogStatus] = useState<'approving' | 'creating' | 'completed' | 'error' | null>(null)
-  const [tokenSymbol, setTokenSymbol] = useState('')
   const [tokenDecimals] = useState(18)
   const [lastTokenDetails, setLastTokenDetails] = useState<{
     name: string
@@ -422,7 +415,6 @@ function TokenForm() {
     try {
       setIsLoading(true)
       setWalletDialogStatus('approving')
-      setTokenSymbol(data.symbol.toUpperCase())
       const decimals = tokenDecimals || 18
       const initialSupply = (BigInt(data.supply) * 10n ** BigInt(decimals)).toString()
       const maxTxAmount = data.features.antiWhale
@@ -497,7 +489,6 @@ function TokenForm() {
       {lastTokenDetails && (
         <TokenSummary
           name={lastTokenDetails.name}
-          symbol={lastTokenDetails.symbol}
           supply={lastTokenDetails.supply}
           contractAddress={lastTokenDetails.contractAddress}
           creationFee={lastTokenDetails.creationFee}

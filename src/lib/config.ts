@@ -1,5 +1,4 @@
 import { bsc, bscTestnet } from '@reown/appkit/networks'
-import { config as wagmiConfig } from './wagmi'
 
 export function getTokenFactoryAddress(): `0x${string}` {
   const addr = process.env.NEXT_PUBLIC_TOKEN_FACTORY_ADDRESS

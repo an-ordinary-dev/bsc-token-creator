@@ -1,6 +1,5 @@
 import { TokenFactory__factory } from "../../typechain-types/factories/contracts/TokenFactory__factory"
 import { useAccount, useWriteContract, useReadContract } from "wagmi"
-import { parseEther } from "viem"
 import { useToast } from "@/components/ui/use-toast"
 import { getTokenFactoryAddress, getEtherscanApiUrl } from "./config"
 import { AbiCoder } from "ethers"
@@ -9,7 +8,6 @@ import { getPublicClient } from '@wagmi/core'
 import { config as wagmiConfig } from '@/lib/wagmi'
 import { getChainId } from './config'
 import { TransactionReceipt, PublicClient } from 'viem'
-import { ethers } from "ethers"
 import { id, Interface } from "ethers"
 
 interface TokenParams {

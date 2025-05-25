@@ -47,7 +47,7 @@ export async function GET(request: Request) {
     if (!contractAddress && Array.isArray(data.result.logs) && data.result.logs.length > 0) {
       // Try to find the first log with a non-zero address (skip 0x000...)
       const logWithAddress = data.result.logs.find(
-        (log: any) => log.address && log.address !== '0x0000000000000000000000000000000000000000'
+        (log: { address: string }) => log.address && log.address !== '0x0000000000000000000000000000000000000000'
       );
       if (logWithAddress) {
         contractAddress = logWithAddress.address;
