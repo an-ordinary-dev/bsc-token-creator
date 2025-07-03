@@ -1,12 +1,5 @@
 # BSC Token Creator
 
-**This is a premium source code sold by [Byteory](https://byteory.com), a web3 development agency.**
-
-For more source code, visit [byteory.com/source-code](https://byteory.com/source-code).
-For customization and support, contact [@byteory on Telegram](https://t.me/byteory), email [support@byteory.com](mailto:support@byteory.com), or WhatsApp [wa.me/+918879732362](https://wa.me/+918879732362).
-
----
-
 ## Table of Contents
 - [About](#about)
 - [Features](#features)
@@ -166,18 +159,5 @@ yarn dev
 
 ### 3. Verify Your Token
 After deployment once you run yarn ts-node scripts/test-verification.ts it will automatically verify all the other or future tokens which will be created.
----
-
-## Support
-For help or customization, contact:
-- Telegram: [@byteory](https://t.me/byteory)
-- Email: [support@byteory.com](mailto:support@byteory.com)
-- WhatsApp: [+91 8879732362](https://wa.me/+918879732362)
-- Website: [byteory.com](https://byteory.com)
 
 ---
-
-## License
-This source code is sold under a commercial license. You are not allowed to resell, redistribute, or share this code. It is for the buyer's use only. For more details or to purchase additional licenses, contact Byteory.
-
-Copyright 2025 Byteory. All rights reserved.
